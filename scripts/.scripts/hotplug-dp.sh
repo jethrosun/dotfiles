@@ -12,12 +12,12 @@ maxlight() {
 
 lowdpi() {
 	/bin/sed -i 's/Xft.dpi: .*/Xft.dpi: 96/' ~/.Xresources
-	/usr/bin/sudo -E -u jethros xrdb ~/.Xresources
+	/usr/bin/sudo -E -u shwsun xrdb ~/.Xresources
 }
 
 hidpi() {
 	/bin/sed -i 's/Xft.dpi: .*/Xft.dpi: 144/' ~/.Xresources
-	/usr/bin/sudo -u jethros xrdb ~/.Xresources
+	/usr/bin/sudo -u shwsun xrdb ~/.Xresources
 }
 
 DEV=""
@@ -93,7 +93,7 @@ fi
 
 # notify-osd doesn't need to be restored
 /usr/bin/pkill notify-osd
-/usr/bin/sudo -E -u jethros nitrogen --restore
-/usr/bin/sudo -E -u jethros /home/jethros/.config/polybar/launch.sh
-# /usr/bin/sudo -E -u jethros /home/jethros/bin/touchpad-setup.sh
+/usr/bin/sudo -E -u shwsun nitrogen --restore
+/usr/bin/sudo -E -u shwsun /home/shwsun/.config/polybar/launch.sh
+# /usr/bin/sudo -E -u shwsun /home/shwsun/bin/touchpad-setup.sh
 # /usr/bin/systemctl restart systemd-logind
